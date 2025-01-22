@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import hashlib
 app = Flask(__name__)
 @app.get('/')
-async def read_root():
+def read_root():
     return {"message": "hello world"}
 @app.route('/validate-md5-password', methods=['POST'])
 def validate_password():
